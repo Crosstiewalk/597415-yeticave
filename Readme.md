@@ -1,7 +1,7 @@
 # Личный проект «YetiCave»
 
 * Студент: [Савелий Дьяков](https://up.htmlacademy.ru/php/4/user/597415).
-* Наставник: `Денис Байдаров`(https://htmlacademy.ru/profile/4er).
+* Наставник: [Денис Байдаров](https://htmlacademy.ru/profile/4er).
 
 ---
 
