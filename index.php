@@ -4,6 +4,7 @@ $is_auth = (bool) rand(0, 1);
 $user_name = 'Константин';
 $user_avatar = 'img/user.jpg';
 $is_auth;
+
 ?>
 <!DOCTYPE html>
 <html lang="ru">
@@ -29,10 +30,9 @@ $is_auth;
 
         <nav class="user-menu">
 
-<<<<<<< HEAD
 
        </nav>
-=======
+
         <?php if ($is_auth == true): ?>
         <div class="user-menu__image">
             <img src="<?=$user_avatar?>" width="40" height="40" alt="Пользователь">
@@ -52,7 +52,7 @@ $is_auth;
         <?php endif; ?>
 
          </nav>
->>>>>>> 1a268ff95054b8a49220dd2bc21f9967d75e3fa0
+
     </div>
 </header>
 
