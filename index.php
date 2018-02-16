@@ -115,7 +115,7 @@ $amount = count($categories);
     <nav class="nav">
         <ul class="nav__list container">
             <li class="nav__item">
-                <a href="all-lots.html">Доски <?php echo($amount);?></a>
+                <a href="all-lots.html">Доски<?php echo($amount);?></a>
             </li>
             <li class="nav__item">
                 <a href="all-lots.html">Крепления</a>
