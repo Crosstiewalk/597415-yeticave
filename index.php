@@ -122,7 +122,7 @@ $amount = count($categories);
 
       <?php while ($x <= $amount) :
             print ('<li class="nav__item">
-                <a href="all-lots.html"><?=$categories?></a>
+                <a href="all-lots.html"><?=array_slice($x)></a>
             </li>');
             $x = $x + 1;
       endwhile; ?>
