@@ -1,6 +1,6 @@
 <?php
 $is_auth = (bool) rand(0, 1);
-$x = 1;
+$x = 0;
 $user_name = 'Константин';
 $user_avatar = 'img/user.jpg';
 $is_auth;
@@ -12,6 +12,7 @@ $four =['name' => 'Ботинки для сноуборда DC Mutiny Charocal',
 $five = ['name' => 'Куртка для сноуборда DC Mutiny Charocal', 'category' => 'Одежда', 'price' => 7500, 'url' => 'img/lot-5.jpg'],
 $six = ['name' => 'Маска Oakley Canopy', 'category' => 'Разное', 'price' => 5400, 'url' => 'img/lot-6.jpg']];
 $amount = count($categories);
+$category_name = $categories($x);
 
 ?>
 <!DOCTYPE html>
@@ -120,12 +121,12 @@ $amount = count($categories);
     <nav class="nav">
         <ul class="nav__list container">
 
-      <?php while ($x <= $amount) :
-            print ('<li class="nav__item">
-                <a href="all-lots.html"><?=array_slice($x)></a>
-            </li>');
-            $x = $x + 1;
-      endwhile; ?>
+      <?php while ($x < $amount) : ?>
+            <li class="nav__item">
+                <a href="all-lots.html">'<?=$category_name></a>
+            </li>
+           <?php $x = $x + 1; ?>
+      <?php endwhile; ?>
 
         </ul>
     </nav>
