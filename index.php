@@ -1,6 +1,6 @@
 <?php
-
 $is_auth = (bool) rand(0, 1);
+$x = 1;
 $user_name = 'Константин';
 $user_avatar = 'img/user.jpg';
 $is_auth;
@@ -12,6 +12,7 @@ $four =['name' => 'Ботинки для сноуборда DC Mutiny Charocal',
 $five = ['name' => 'Куртка для сноуборда DC Mutiny Charocal', 'category' => 'Одежда', 'price' => 7500, 'url' => 'img/lot-5.jpg'],
 $six = ['name' => 'Маска Oakley Canopy', 'category' => 'Разное', 'price' => 5400, 'url' => 'img/lot-6.jpg']];
 $amount = count($categories);
+
 ?>
 <!DOCTYPE html>
 <html lang="ru">
@@ -37,25 +38,29 @@ $amount = count($categories);
 
         <nav class="user-menu">
 
-<? if ($is_auth == true): ?>
-<div class="user-menu__image">
-    <img src="<?=$user_avatar?>" width="40" height="40" alt="Пользователь">
-  </div>
-  <div class="user-menu__logged">
-    <p><?=$user_name?></p>
-  </div>
-<? else: ?>
-<ul class="user-menu__list">
-    <li class="user-menu__item">
-      <a href="#">Регистрация</a>
-    </li>
-    <li class="user-menu__item">
-      <a href="#">Вход</a>
-    </li>
-  </ul>
-<? endif; ?>
 
        </nav>
+
+        <?php if ($is_auth == true): ?>
+        <div class="user-menu__image">
+            <img src="<?=$user_avatar?>" width="40" height="40" alt="Пользователь">
+        </div>
+          <div class="user-menu__logged">
+            <p><?=$user_name?></p>
+          </div>
+        <?php else: ?>
+        <ul class="user-menu__list">
+            <li class="user-menu__item">
+              <a href="#">Регистрация</a>
+            </li>
+            <li class="user-menu__item">
+              <a href="#">Вход</a>
+            </li>
+        </ul>
+        <?php endif; ?>
+
+         </nav>
+
     </div>
 </header>
 
@@ -114,24 +119,14 @@ $amount = count($categories);
 <footer class="main-footer">
     <nav class="nav">
         <ul class="nav__list container">
-            <li class="nav__item">
-                <a href="all-lots.html">Доски<?php echo($amount);?></a>
-            </li>
-            <li class="nav__item">
-                <a href="all-lots.html">Крепления</a>
-            </li>
-            <li class="nav__item">
-                <a href="all-lots.html">Ботинки</a>
-            </li>
-            <li class="nav__item">
-                <a href="all-lots.html">Одежда</a>
-            </li>
-            <li class="nav__item">
-                <a href="all-lots.html">Инструменты</a>
-            </li>
-            <li class="nav__item">
-                <a href="all-lots.html">Разное</a>
-            </li>
+
+      <?php while ($x <= $amount) :
+            print ('<li class="nav__item">
+                <a href="all-lots.html"><?=$categories?></a>
+            </li>');
+            $x = $x + 1;
+      endwhile; ?>
+
         </ul>
     </nav>
     <div class="main-footer__bottom container">
