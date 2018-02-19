@@ -38,7 +38,6 @@ $category = ["Доски и лыжи", "Крепления", "Ботинки", "
                  'category' => 'Разное',
                  'price' => 5400,
                  'url' => 'img/lot-6.jpg']
-                 ]
                 ];
 $amount = count($categories);
 
