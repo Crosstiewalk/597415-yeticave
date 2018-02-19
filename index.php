@@ -1,18 +1,46 @@
 <?php
+ini_set('error_reporting', E_ALL);
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
 $is_auth = (bool) rand(0, 1);
 $x = 0;
 $user_name = 'Константин';
 $user_avatar = 'img/user.jpg';
 $is_auth;
-$categories = ["Доски и лыжи", "Крепления", "Ботинки", "Одежда", "Инструменты", "Разное"];
-      $items = [$one = ['name' => '2014 Rossignol District Snowboard', 'category' => 'Доски и лыжи', 'price' => 10999, 'url' => 'img/lot-1.jpg'],
-$two = ['name' => 'DC Ply Mens 2016/2017 Snowboard', 'category' => 'Доски и лыжи', 'price' => 159999, 'url' => 'img/lot-2.jpg'],
-$three = ['name' => 'Крепления Union Contact Pro 2015 года размер L/XL', 'category' => 'Крепления', 'price' => 8000, 'url' => 'img/lot-3.jpg'],
-$four =['name' => 'Ботинки для сноуборда DC Mutiny Charocal', 'category' => 'Ботинки', 'price' => 10999, 'url' => 'img/lot-4.jpg'],
-$five = ['name' => 'Куртка для сноуборда DC Mutiny Charocal', 'category' => 'Одежда', 'price' => 7500, 'url' => 'img/lot-5.jpg'],
-$six = ['name' => 'Маска Oakley Canopy', 'category' => 'Разное', 'price' => 5400, 'url' => 'img/lot-6.jpg']];
+$category = ["Доски и лыжи", "Крепления", "Ботинки", "Одежда", "Инструменты", "Разное"];
+      $items = [
+                 ['name' => '2014 Rossignol District Snowboard',
+                  'category' => 'Доски и лыжи',
+                  'price' => 10999,
+                  'url' => 'img/lot-1.jpg'
+                 ],
+                 ['name' => 'DC Ply Mens 2016/2017 Snowboard',
+                  'category' => 'Доски и лыжи',
+                  'price' => 159999,
+                  'url' => 'img/lot-2.jpg'
+                 ],
+                 ['name' => 'Крепления Union Contact Pro 2015 года размер L/XL',
+                 'category' => 'Крепления',
+                 'price' => 8000,
+                 'url' => 'img/lot-3.jpg'
+                 ],
+                 ['name' => 'Ботинки для сноуборда DC Mutiny Charocal',
+                 'category' => 'Ботинки',
+                 'price' => 10999,
+                 'url' => 'img/lot-4.jpg'
+                 ],
+                 ['name' => 'Куртка для сноуборда DC Mutiny Charocal',
+                 'category' => 'Одежда',
+                 'price' => 7500,
+                 'url' => 'img/lot-5.jpg'
+                 ],
+                 ['name' => 'Маска Oakley Canopy',
+                 'category' => 'Разное',
+                 'price' => 5400,
+                 'url' => 'img/lot-6.jpg']
+                 ]
+                ];
 $amount = count($categories);
-$category_name = $categories($x);
 
 ?>
 <!DOCTYPE html>
@@ -123,7 +151,7 @@ $category_name = $categories($x);
 
       <?php while ($x < $amount) : ?>
             <li class="nav__item">
-                <a href="all-lots.html">'<?=$category_name></a>
+                <a href="all-lots.html">'<?=$category[$x]?></a>
             </li>
            <?php $x = $x + 1; ?>
       <?php endwhile; ?>
