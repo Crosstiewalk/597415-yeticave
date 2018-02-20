@@ -70,6 +70,7 @@ $amount_items = count($items);
         <nav class="user-menu">
 
 
+
        </nav>
 
         <?php if ($is_auth == true): ?>
@@ -91,6 +92,7 @@ $amount_items = count($items);
         <?php endif; ?>
 
          </nav>
+
 
     </div>
 </header>
