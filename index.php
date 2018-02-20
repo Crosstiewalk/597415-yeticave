@@ -37,10 +37,12 @@ $category = ['Доски и лыжи', 'Крепления', 'Ботинки', '
                  'six' => ['name' => 'Маска Oakley Canopy',
                  'category' => 'Разное',
                  'price' => 5400,
-                 'url' => 'img/lot-6.jpg']
+                 'url' => 'img/lot-6.jpg'],
                ];
 $amount = count($category);
 $amount_items = count($items);
+
+
 
 ?>
 <!DOCTYPE html>
@@ -105,6 +107,9 @@ $amount_items = count($items);
       </li>
      <?php $x = $x + 1; ?>
 <?php endwhile; ?>
+<?php $x = 0; ?>
+
+
         </ul>
     </section>
     <section class="lots">
@@ -112,6 +117,7 @@ $amount_items = count($items);
             <h2>Открытые лоты</h2>
         </div>
         <ul class="lots__list">
+
       <?php foreach ($items as $key => $value) : ?>
             <li class="lots__item lot">
                 <div class="lot__image">
